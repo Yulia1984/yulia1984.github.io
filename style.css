@@ -74,3 +74,9 @@ ul.list-cities {
 #weather-description::first-letter {
   text-transform: uppercase;
 }
+
+footer {
+  text-align: center;
+  font-size: 10px;
+  margin: 15px;
+}
