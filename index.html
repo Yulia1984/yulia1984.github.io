@@ -13,88 +13,91 @@
 </head>
 
 <body>
-  <div class="container">
-    <ul class="list-cities">
-      <li class="col city"><a>Barcelona</a></li>
-      <li class="col city"><a>Kyiv</a></li>
-      <li class="col city"><a>Kharkiv</a></li>
-      <li class="col city"><a>Lviv</a></li>
-    </ul>
-    <form id="search-form">
-      <input type="search" name="text" class="search" autofocus="on" placeholder="Type a city" id="search-text-input" />
-      <button class="search-in">Search</button>
-      <button class="current">Current</button>
-    </form>
-    <div id="currentCity">Paris</div>
-    <div class="space">
-      <div class="row">
-        <div class="col max" id="currentTime">23:10</div>
-        <div class="col max" id="currentTemperature">
-          +28<span class="degrees"> &deg; C | &deg; F</span>
+  <main>
+    <div class="container">
+      <ul class="list-cities">
+        <li class="col city"><a href="#" id="barcelona">Barcelona</a></li>
+        <li class="col city"><a href="#" id="kyiv">Kyiv</a></li>
+        <li class="col city"><a href="#" id="kharkiv">Kharkiv</a></li>
+        <li class="col city"><a href="#" id="lviv">Lviv</a></li>
+      </ul>
+      <form id="search-form">
+        <input type="search" name="text" class="search" autofocus="on" placeholder="Type a city"
+          id="search-text-input" />
+        <button class="search-in">Search</button>
+        <button class="current">Current</button>
+      </form>
+      <div id="currentCity">Paris</div>
+      <div class="space">
+        <div class="row">
+          <div class="col max" id="currentTime">23:10</div>
+          <div class="col max" id="currentTemperature">
+            +28<span class="degrees"> &deg; C | &deg; F</span>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col" id="currentDay">Monday</div>
+          <div class="col" id="weather-description">Clear with clouds</div>
         </div>
       </div>
       <div class="row">
-        <div class="col" id="currentDay">Monday</div>
-        <div class="col" id="weather-description">Clear with clouds</div>
+        <div class="col">
+          <ul>
+            <li>Mon</li>
+            <li>+28 &deg;</li>
+            <li>🌤</li>
+          </ul>
+        </div>
+        <div class="col">
+          <ul>
+            <li>Tue</li>
+            <li>+24&deg;</li>
+            <li>🌦</li>
+          </ul>
+        </div>
+        <div class="col">
+          <ul>
+            <li>Wed</li>
+            <li>+22&deg;</li>
+            <li>🌤</li>
+          </ul>
+        </div>
+        <div class="col">
+          <ul>
+            <li>Thu</li>
+            <li>+29&deg;</li>
+            <li>☀</li>
+          </ul>
+        </div>
+        <div class="col">
+          <ul>
+            <li>Fri</li>
+            <li>+30&deg;</li>
+            <li>☀</li>
+          </ul>
+        </div>
+        <div class="col">
+          <ul>
+            <li>Sat</li>
+            <li>+32&deg;</li>
+            <li>🌧</li>
+          </ul>
+        </div>
+        <div class="col">
+          <ul>
+            <li>Sun</li>
+            <li>+29&deg;</li>
+            <li>☀</li>
+          </ul>
+        </div>
       </div>
-    </div>
-    <div class="row">
-      <div class="col">
-        <ul>
-          <li>Mon</li>
-          <li>+28 &deg;</li>
-          <li>🌤</li>
-        </ul>
+      <div class="row">
+        <div class="col last" id="humidity">Humidity: 90%</div>
+        <div class="col last" id="wind-speed">Wind: 4km/h</div>
       </div>
-      <div class="col">
-        <ul>
-          <li>Tue</li>
-          <li>+24&deg;</li>
-          <li>🌦</li>
-        </ul>
-      </div>
-      <div class="col">
-        <ul>
-          <li>Wed</li>
-          <li>+22&deg;</li>
-          <li>🌤</li>
-        </ul>
-      </div>
-      <div class="col">
-        <ul>
-          <li>Thu</li>
-          <li>+29&deg;</li>
-          <li>☀</li>
-        </ul>
-      </div>
-      <div class="col">
-        <ul>
-          <li>Fri</li>
-          <li>+30&deg;</li>
-          <li>☀</li>
-        </ul>
-      </div>
-      <div class="col">
-        <ul>
-          <li>Sat</li>
-          <li>+32&deg;</li>
-          <li>🌧</li>
-        </ul>
-      </div>
-      <div class="col">
-        <ul>
-          <li>Sun</li>
-          <li>+29&deg;</li>
-          <li>☀</li>
-        </ul>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col last" id="humidity">Humidity: 90%</div>
-      <div class="col last" id="wind-speed">Wind: 4km/h</div>
-    </div>
-    <footer>Designed by <a href="https://github.com/Yulia1984/yulia1984.github.io" target="_blank">Yuliya Zinchenko</a>
-    </footer>
+  </main>
+  <footer>Designed by <a href="https://github.com/Yulia1984/yulia1984.github.io" target="_blank">Yuliya Zinchenko</a>
+  </footer>
   </div>
 
   <script src="src/script.js"></script>

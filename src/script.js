@@ -54,3 +54,35 @@
       let city = document.querySelector("#search-text-input").value;
     }
   
+let showCityFirst = document.querySelector("#barcelona");
+let showCitySecond = document.querySelector("#kyiv");
+let showCityThird = document.querySelector("#kharkiv");
+let showCityFourth = document.querySelector("#lviv");
+    showCityFirst.addEventListener("click", showFirst);
+    showCitySecond.addEventListener("click", showSecond);
+    showCityThird.addEventListener("click", showThird);
+    showCityFourth.addEventListener("click", showFourth);
+
+    function showFirst () {
+       currentCity = document.querySelector("#currentCity");
+      currentCity.innerHTML = "Barcelona";
+        searchCity("Barcelona");
+    }
+
+    function showSecond () {
+       currentCity = document.querySelector("#currentCity");
+      currentCity.innerHTML = "Kyiv";
+        searchCity("Kyiv");
+    }
+
+    function showThird () {
+       currentCity = document.querySelector("#currentCity");
+      currentCity.innerHTML = "Kharkiv";
+        searchCity("Kharkiv");
+    }
+
+    function showFourth () {
+       currentCity = document.querySelector("#currentCity");
+      currentCity.innerHTML = "Lviv";
+        searchCity("Lviv");
+    }
