@@ -10,96 +10,96 @@
     integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous" />
   <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
   <link rel="stylesheet" href="src/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300&display=swap" rel="stylesheet">
 </head>
 
 <body>
-  <main>
-    <div class="container">
-      <ul class="list-cities">
-        <li class="col city"><a href="#" id="barcelona">Barcelona</a></li>
-        <li class="col city"><a href="#" id="kyiv">Kyiv</a></li>
-        <li class="col city"><a href="#" id="kharkiv">Kharkiv</a></li>
-        <li class="col city"><a href="#" id="lviv">Lviv</a></li>
-      </ul>
-      <form id="search-form">
-        <input type="search" name="text" class="search" autofocus="on" placeholder="Type a city"
-          id="search-text-input" />
-        <button class="search-in">Search</button>
-        <button class="current">Current</button>
-      </form>
-      <div id="currentCity">Paris</div>
-      <div class="space">
-        <div class="row">
-          <div class="col max" id="currentTime">23:10</div>
-          <div class="col max" id="currentTemperature">
-            +28<span class="degrees"> &deg; C | &deg; F</span>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col" id="currentDay">Monday</div>
-          <div class="col" id="weather-description">Clear with clouds</div>
+  <div class="container">
+    <ul class="list-cities">
+      <li class="col city cities"><a href="#" id="barcelona">Barcelona</a></li>
+      <li class="col city cities"><a href="#" id="kyiv">Kyiv</a></li>
+      <li class="col city cities"><a href="#" id="kharkiv">Kharkiv</a></li>
+      <li class="col city cities"><a href="#" id="lviv">Lviv</a></li>
+    </ul>
+    <form id="search-form">
+      <input type="search" name="text" class="search" autofocus="on" placeholder="Type a city" id="search-text-input" />
+      <button class="search-in">Search</button>
+      <button class="current">Current</button>
+    </form>
+    <div id="currentCity">Paris</div>
+    <div class="space">
+      <div class="row">
+        <div class="col max" id="currentTime">23:10</div>
+        <div class="col max">
+          <span id="currentTemperature" class="current-degrees">+28</span>
+          <span class="degrees"> &deg; C | &deg; F</span>
         </div>
       </div>
       <div class="row">
-        <div class="col">
-          <ul>
-            <li>Mon</li>
-            <li>+28 &deg;</li>
-            <li>🌤</li>
-          </ul>
-        </div>
-        <div class="col">
-          <ul>
-            <li>Tue</li>
-            <li>+24&deg;</li>
-            <li>🌦</li>
-          </ul>
-        </div>
-        <div class="col">
-          <ul>
-            <li>Wed</li>
-            <li>+22&deg;</li>
-            <li>🌤</li>
-          </ul>
-        </div>
-        <div class="col">
-          <ul>
-            <li>Thu</li>
-            <li>+29&deg;</li>
-            <li>☀</li>
-          </ul>
-        </div>
-        <div class="col">
-          <ul>
-            <li>Fri</li>
-            <li>+30&deg;</li>
-            <li>☀</li>
-          </ul>
-        </div>
-        <div class="col">
-          <ul>
-            <li>Sat</li>
-            <li>+32&deg;</li>
-            <li>🌧</li>
-          </ul>
-        </div>
-        <div class="col">
-          <ul>
-            <li>Sun</li>
-            <li>+29&deg;</li>
-            <li>☀</li>
-          </ul>
-        </div>
+        <div class="col" id="currentDay">Monday</div>
+        <div class="col" id="weather-description">Clear with clouds</div>
       </div>
-      <div class="row">
-        <div class="col last" id="humidity">Humidity: 90%</div>
-        <div class="col last" id="wind-speed">Wind: 4km/h</div>
+    </div>
+    <div class="row">
+      <div class="col">
+        <ul class="weather-day">
+          <li class="day-of-week">Monday</li>
+          <li class="new-degrees">+28 &deg;</li>
+          <li>🌤</li>
+        </ul>
       </div>
-  </main>
-  <footer>Designed by <a href="https://github.com/Yulia1984/yulia1984.github.io" target="_blank">Yuliya Zinchenko</a>
-  </footer>
+      <div class="col">
+        <ul class="weather-day">
+          <li class="day-of-week">Tuesday</li>
+          <li class="new-degrees">+24&deg;</li>
+          <li>🌦</li>
+        </ul>
+      </div>
+      <div class="col">
+        <ul class="weather-day">
+          <li class="day-of-week">Wednesday</li>
+          <li class="new-degrees">+22&deg;</li>
+          <li>🌤</li>
+        </ul>
+      </div>
+      <div class="col">
+        <ul class="weather-day">
+          <li class="day-of-week">Thursday</li>
+          <li class="new-degrees">+29&deg;</li>
+          <li>☀</li>
+        </ul>
+      </div>
+      <div class="col">
+        <ul class="weather-day">
+          <li class="day-of-week">Friday</li>
+          <li class="new-degrees">+30&deg;</li>
+          <li>☀</li>
+        </ul>
+      </div>
+      <div class="col">
+        <ul class="weather-day">
+          <li class="day-of-week">Saturday</li>
+          <li class="new-degrees">+32&deg;</li>
+          <li>🌧</li>
+        </ul>
+      </div>
+      <div class="col">
+        <ul class="weather-day">
+          <li class="day-of-week">Sunday</li>
+          <li class="new-degrees">+29&deg;</li>
+          <li>☀</li>
+        </ul>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col last">Humidity: <span id="humidity" class="current-degrees">90%</span></div>
+      <div class="col last">Wind: <span id="wind-speed" class="current-degrees">4km/h</span></div>
+    </div>
+    <footer>Designed by <a href="https://github.com/Yulia1984/yulia1984.github.io" target="_blank">Yuliya Zinchenko</a>
+    </footer>
   </div>
-
   <script src="src/script.js"></script>
 </body>
 

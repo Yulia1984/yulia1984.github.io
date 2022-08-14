@@ -4,21 +4,70 @@
 }
 
 body {
-  font-family: Verdana, sans-serif;
+  font-family: "Nunito", sans-serif;
   font-size: 18px;
 }
 
 button {
   color: white;
+  padding: 3px 10px;
+  margin-left: -3px;
+  margin-right: -3px;
 }
 
+a {
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  color: rgb(33, 37, 41);
+  padding: 3px 15px;
+}
+
+footer a:hover {
+  font-size: 10px;
+  border-bottom: none;
+  font-weight: 200;
+  padding: 0;
+  text-decoration: underline;
+  color: rgb(11, 182, 125);
+}
+
+footer a {
+  padding: 0;
+  text-decoration: underline;
+  color: rgb(11, 182, 125);
+}
+
+a:hover {
+  color: rgb(39, 41, 43);
+  border-bottom: 2px solid rgb(11, 182, 125);
+  font-size: 19px;
+  font-weight: 600;
+}
 ul {
   list-style: none;
 }
 
+.search {
+  padding: 3px 10px;
+  margin-right: -1px;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  outline: none !important;
+}
+
+.day-of-week {
+  margin-bottom: 10px;
+  margin-right: 50px;
+  border-bottom: 2px solid rgb(11, 182, 125);
+  font-size: smaller;
+}
+
 .search-in {
-  background-color: green;
-  border: green 2px solid;
+  background-color: rgb(11, 182, 125);
+  border: rgb(11, 182, 125) 2px solid;
 }
 
 .current {
@@ -26,6 +75,14 @@ ul {
   border: orange 2px solid;
 }
 
+.current-degrees {
+  color: rgb(11, 182, 125);
+  font-weight: 600;
+}
+
+.new-degrees {
+  font-weight: 800;
+}
 .max {
   font-size: 40px;
 }
@@ -41,7 +98,7 @@ ul {
 .container {
   margin: 30px auto;
   border: 2px solid rgb(89, 90, 89);
-  max-width: 800px;
+  max-width: 1000px;
 }
 
 ul {

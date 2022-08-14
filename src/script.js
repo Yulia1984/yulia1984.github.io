@@ -25,13 +25,16 @@
       console.log(response.data);
       let temperatureElement = document.querySelector("#currentTemperature");
       let temperature = Math.round(response.data.main.temp);
-      temperatureElement.innerHTML = `${temperature}<span class="degrees"> &deg; C | &deg; F</span>`;
+      temperatureElement.innerHTML = temperature;
+      temperatureElement.classList.add("current-degrees");
       let description = document.querySelector("#weather-description");
       description.innerHTML = response.data.weather[0].description;
       let wind = document.querySelector("#wind-speed");
-      wind.innerHTML = `Wind: ${response.data.wind.speed} km/h`;
+      wind.innerHTML = `${response.data.wind.speed} km/h`;
+      wind.classList.add("current-degrees");
       let humidity = document.querySelector("#humidity");
-      humidity.innerHTML = `Humidity: ${response.data.main.humidity}%`;
+      humidity.innerHTML = `${response.data.main.humidity}%`;
+      humidity.classList.add("current-degrees");
     }
 
     function searchCity(city) {
