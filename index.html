@@ -6,22 +6,22 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Document</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous" />
   <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
   <link rel="stylesheet" href="src/style.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous" />
 </head>
 
 <body>
-  <div class="container">
+  <div class="container" id="all">
     <ul class="list-cities">
-      <li class="col city cities"><a href="#" id="barcelona">Barcelona</a></li>
-      <li class="col city cities"><a href="#" id="kyiv">Kyiv</a></li>
-      <li class="col city cities"><a href="#" id="kharkiv">Kharkiv</a></li>
-      <li class="col city cities"><a href="#" id="lviv">Lviv</a></li>
+      <li class="col city cities" id="barcelona">Barcelona</li>
+      <li class="col city cities" id="kyiv">Kyiv</li>
+      <li class="col city cities" id="kharkiv">Kharkiv</li>
+      <li class="col city cities" id="lviv">Lviv</li>
     </ul>
     <form id="search-form">
       <input type="search" name="text" class="search" autofocus="on" placeholder="Type a city" id="search-text-input" />
@@ -33,7 +33,8 @@
       <div class="row">
         <div class="col max" id="currentTime">23:10</div>
         <div class="col max">
-          <span id="currentTemperature" class="current-degrees">+28</span>
+          <img src="https://ssl.gstatic.com/onebox/weather/64/cloudy.png" alt="Description weather"><span
+            id="currentTemperature" class="current-degrees">+28</span>
           <span class="degrees"> &deg; C | &deg; F</span>
         </div>
       </div>
@@ -43,49 +44,49 @@
       </div>
     </div>
     <div class="row">
-      <div class="col">
+      <div class="col" id="column">
         <ul class="weather-day">
           <li class="day-of-week">Monday</li>
           <li class="new-degrees">+28 &deg;</li>
           <li>🌤</li>
         </ul>
       </div>
-      <div class="col">
+      <div class="col" id="column">
         <ul class="weather-day">
           <li class="day-of-week">Tuesday</li>
           <li class="new-degrees">+24&deg;</li>
           <li>🌦</li>
         </ul>
       </div>
-      <div class="col">
+      <div class="col" id="column">
         <ul class="weather-day">
           <li class="day-of-week">Wednesday</li>
           <li class="new-degrees">+22&deg;</li>
           <li>🌤</li>
         </ul>
       </div>
-      <div class="col">
+      <div class="col" id="column">
         <ul class="weather-day">
           <li class="day-of-week">Thursday</li>
           <li class="new-degrees">+29&deg;</li>
           <li>☀</li>
         </ul>
       </div>
-      <div class="col">
+      <div class="col" id="column">
         <ul class="weather-day">
           <li class="day-of-week">Friday</li>
           <li class="new-degrees">+30&deg;</li>
           <li>☀</li>
         </ul>
       </div>
-      <div class="col">
+      <div class="col" id="column">
         <ul class="weather-day">
           <li class="day-of-week">Saturday</li>
           <li class="new-degrees">+32&deg;</li>
           <li>🌧</li>
         </ul>
       </div>
-      <div class="col">
+      <div class="col" id="column">
         <ul class="weather-day">
           <li class="day-of-week">Sunday</li>
           <li class="new-degrees">+29&deg;</li>

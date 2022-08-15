@@ -15,11 +15,22 @@ button {
   margin-right: -3px;
 }
 
-a {
-  text-decoration: none;
-  border-bottom: 1px solid transparent;
-  color: rgb(33, 37, 41);
-  padding: 3px 15px;
+ul.list-cities {
+  padding: 0;
+}
+
+.cities:hover {
+  color: rgb(39, 41, 43);
+  border-bottom: 2px solid rgb(11, 182, 125);
+  font-size: 19px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+footer a {
+  padding: 0;
+  text-decoration: underline;
+  color: rgb(11, 182, 125);
 }
 
 footer a:hover {
@@ -31,25 +42,15 @@ footer a:hover {
   color: rgb(11, 182, 125);
 }
 
-footer a {
-  padding: 0;
-  text-decoration: underline;
-  color: rgb(11, 182, 125);
-}
-
-a:hover {
-  color: rgb(39, 41, 43);
-  border-bottom: 2px solid rgb(11, 182, 125);
-  font-size: 19px;
-  font-weight: 600;
-}
 ul {
   list-style: none;
+  padding-left: 0;
 }
 
-.search {
-  padding: 3px 10px;
-  margin-right: -1px;
+footer {
+  text-align: center;
+  font-size: 10px;
+  margin: 15px;
 }
 
 input:focus,
@@ -58,9 +59,34 @@ select:focus {
   outline: none !important;
 }
 
+#all {
+  margin: 30px auto;
+  border: 1px solid #dadde1;
+  max-width: 800px;
+  border-radius: 5px;
+}
+
+#column:hover {
+  background-color: rgba(58, 170, 140, 0.1);
+  border-radius: 5px;
+}
+
+#currentCity {
+  font-size: 30px;
+  padding-top: 15px;
+}
+
+#weather-description::first-letter {
+  text-transform: uppercase;
+}
+
+.search {
+  padding: 3px 10px;
+  margin-right: -5px;
+}
+
 .day-of-week {
-  margin-bottom: 10px;
-  margin-right: 50px;
+  margin: 5px 10px 10px 10px;
   border-bottom: 2px solid rgb(11, 182, 125);
   font-size: smaller;
 }
@@ -68,6 +94,7 @@ select:focus {
 .search-in {
   background-color: rgb(11, 182, 125);
   border: rgb(11, 182, 125) 2px solid;
+  margin-right: -5px;
 }
 
 .current {
@@ -81,8 +108,9 @@ select:focus {
 }
 
 .new-degrees {
-  font-weight: 800;
+  font-weight: 700;
 }
+
 .max {
   font-size: 40px;
 }
@@ -95,18 +123,14 @@ select:focus {
   margin: 10px;
 }
 
-.container {
-  margin: 30px auto;
-  border: 2px solid rgb(89, 90, 89);
-  max-width: 1000px;
-}
-
-ul {
-  padding-left: 0;
-}
-
 .last {
   margin-bottom: 20px;
+}
+
+.degrees {
+  position: relative;
+  top: -18px;
+  font-size: 16px;
 }
 
 li.city {
@@ -119,21 +143,10 @@ ul.list-cities {
   margin-top: 20px;
 }
 
-.degrees {
-  font-size: 16px;
+ul.weather-day {
+  padding: 0;
 }
 
-#currentCity {
-  font-size: 30px;
-  padding-top: 15px;
-}
-
-#weather-description::first-letter {
-  text-transform: uppercase;
-}
-
-footer {
-  text-align: center;
-  font-size: 10px;
-  margin: 15px;
+li#barcelona.col.city.cities {
+  margin-left: 0;
 }
