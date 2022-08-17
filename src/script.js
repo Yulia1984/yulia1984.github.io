@@ -18,23 +18,28 @@
     let actualTime = document.querySelector("#currentTime");
     actualTime.innerHTML = `${hours}:${minutes}`;
 
-    let form = document.querySelector("#search-form");
-    form.addEventListener("submit", search);
+    
 
     function showTemperature(response) {
       console.log(response.data);
       let temperatureElement = document.querySelector("#currentTemperature");
       let temperature = Math.round(response.data.main.temp);
-      temperatureElement.innerHTML = temperature;
-      temperatureElement.classList.add("current-degrees");
       let description = document.querySelector("#weather-description");
-      description.innerHTML = response.data.weather[0].description;
       let wind = document.querySelector("#wind-speed");
-      wind.innerHTML = `${response.data.wind.speed} km/h`;
-      wind.classList.add("current-degrees");
       let humidity = document.querySelector("#humidity");
+      let iconElement = document.querySelector("#icon");
+
+      /*celsiusTemperature = response.data.main.temp;*/
+
       humidity.innerHTML = `${response.data.main.humidity}%`;
       humidity.classList.add("current-degrees");
+      temperatureElement.innerHTML = temperature;
+      temperatureElement.classList.add("current-degrees");
+      description.innerHTML = response.data.weather[0].description;
+      wind.innerHTML = `${response.data.wind.speed} km/h`;
+      wind.classList.add("current-degrees");
+      iconElement.setAttribute("src",`http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);
+      iconElement.setAttribute("alt", response.data.weather[0].description);
     }
 
     function searchCity(city) {
@@ -89,3 +94,38 @@ let showCityFourth = document.querySelector("#lviv");
       currentCity.innerHTML = "Lviv";
         searchCity("Lviv");
     }
+  
+/*function showFahrenheit (event) {
+  event.preventDefault ();
+  let fahrenheitTemp = (14 * 9) / 5 + 32;
+  alert("fahrenheitTemp");
+}*/
+
+let form = document.querySelector("#search-form");
+    form.addEventListener("submit", search);
+
+    /*let fahrenheitLink = document.querySelector("#currentTemperature");
+    fahrenheitLink.addEventListener("click", showFahrenheit);*/
+
+    
+    /*   function showPosition (position) {
+        let apiKey = "afaec91559c493020719c8b714fb9e8b";
+        let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${position.coords.latitude}&lon=${position.coords.longitude}&appid=${apiKey}&units=metric`;
+        axios.get(apiUrl).then(showTemperature);
+    }
+    
+    function getCurrentPosition (event) {
+       event.preventDefault();
+navigator.geolocation.getCurrentPosition(ShowPosition);
+    }
+    
+    let buttonLocation = document.querySelector("#location");
+    buttonLocation.addEventListener("click", getCurrentPosition);*/
+
+    searchCity ("Pokrovsk");
+
+
+
+ 
+
+

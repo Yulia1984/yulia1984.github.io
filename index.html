@@ -26,16 +26,16 @@
     <form id="search-form">
       <input type="search" name="text" class="search" autofocus="on" placeholder="Type a city" id="search-text-input" />
       <button class="search-in">Search</button>
-      <button class="current">Current</button>
+      <button class="current" id="location">Current</button>
     </form>
     <div id="currentCity">Paris</div>
     <div class="space">
       <div class="row">
         <div class="col max" id="currentTime">23:10</div>
         <div class="col max">
-          <img src="https://ssl.gstatic.com/onebox/weather/64/cloudy.png" alt="Description weather"><span
-            id="currentTemperature" class="current-degrees">+28</span>
-          <span class="degrees"> &deg; C | &deg; F</span>
+          <img src="https://ssl.gstatic.com/onebox/weather/64/cloudy.png" alt="Description weather" id="icon">
+          <span id="currentTemperature" class="current-degrees">+28</span>
+          <span class="degrees"> &deg;C | <a href="#" id="fahrenheit-link">&deg;F</a></span>
         </div>
       </div>
       <div class="row">
