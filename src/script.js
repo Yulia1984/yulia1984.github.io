@@ -94,33 +94,23 @@ let showCityFourth = document.querySelector("#lviv");
       currentCity.innerHTML = "Lviv";
         searchCity("Lviv");
     }
-  
-/*function showFahrenheit (event) {
-  event.preventDefault ();
-  let fahrenheitTemp = (14 * 9) / 5 + 32;
-  alert("fahrenheitTemp");
-}*/
+
+function searchLocation(position) {
+  let apiKey = "afaec91559c493020719c8b714fb9e8b";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${position.coords.latitude}&lon=${position.coords.longitude}&appid=${apiKey}&units=metric`;
+  axios.get(apiUrl).then(showTemperature);
+}
+
+function getCurrentLocation(event) {
+  event.preventDefault();
+  navigator.geolocation.getCurrentPosition(searchLocation);
+}
 
 let form = document.querySelector("#search-form");
     form.addEventListener("submit", search);
 
-    /*let fahrenheitLink = document.querySelector("#currentTemperature");
-    fahrenheitLink.addEventListener("click", showFahrenheit);*/
-
-    
-    /*   function showPosition (position) {
-        let apiKey = "afaec91559c493020719c8b714fb9e8b";
-        let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${position.coords.latitude}&lon=${position.coords.longitude}&appid=${apiKey}&units=metric`;
-        axios.get(apiUrl).then(showTemperature);
-    }
-    
-    function getCurrentPosition (event) {
-       event.preventDefault();
-navigator.geolocation.getCurrentPosition(ShowPosition);
-    }
-    
-    let buttonLocation = document.querySelector("#location");
-    buttonLocation.addEventListener("click", getCurrentPosition);*/
+    let currentLocationButton = document.querySelector("#location");
+currentLocationButton.addEventListener("click", getCurrentLocation);
 
     searchCity ("Pokrovsk");
 
