@@ -20,8 +20,7 @@
 
     
 
-    function showTemperature(response) {
-      console.log(response.data);
+    function displayTemperature(response) {
       let temperatureElement = document.querySelector("#currentTemperature");
       let temperature = Math.round(response.data.main.temp);
       let description = document.querySelector("#weather-description");
@@ -29,12 +28,12 @@
       let humidity = document.querySelector("#humidity");
       let iconElement = document.querySelector("#icon");
 
-      /*celsiusTemperature = response.data.main.temp;*/
+      celsiusTemperature = response.data.main.temp;
 
+      temperatureElement.innerHTML = Math.round(celsiusTemperature);
+      temperatureElement.classList.add("current-degrees");
       humidity.innerHTML = `${response.data.main.humidity}%`;
       humidity.classList.add("current-degrees");
-      temperatureElement.innerHTML = temperature;
-      temperatureElement.classList.add("current-degrees");
       description.innerHTML = response.data.weather[0].description;
       wind.innerHTML = `${response.data.wind.speed} km/h`;
       wind.classList.add("current-degrees");
@@ -45,7 +44,7 @@
     function searchCity(city) {
       let apiKey = "afaec91559c493020719c8b714fb9e8b";
       let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${apiKey}`;
-      axios.get(apiUrl).then(showTemperature);
+      axios.get(apiUrl).then(displayTemperature);
     }
 
     function search(event) {
@@ -98,7 +97,7 @@ let showCityFourth = document.querySelector("#lviv");
 function searchLocation(position) {
   let apiKey = "afaec91559c493020719c8b714fb9e8b";
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${position.coords.latitude}&lon=${position.coords.longitude}&appid=${apiKey}&units=metric`;
-  axios.get(apiUrl).then(showTemperature);
+  axios.get(apiUrl).then(displayTemperature);
 }
 
 function getCurrentLocation(event) {
@@ -106,8 +105,33 @@ function getCurrentLocation(event) {
   navigator.geolocation.getCurrentPosition(searchLocation);
 }
 
+function displayFahrenheitTemperature(event) {
+  event.preventDefault();
+  let temperatureElement = document.querySelector("#currentTemperature");
+  celsiusLink.classList.remove("active");
+  fahrenheitLink.classList.add("active");
+  let fahrenheiTemperature = (celsiusTemperature * 9) / 5 + 32;
+  temperatureElement.innerHTML = Math.round(fahrenheiTemperature);
+}
+
+function displayCelsiusTemperature(event) {
+  event.preventDefault();
+  celsiusLink.classList.add("active");
+  fahrenheitLink.classList.remove("active");
+  let temperatureElement = document.querySelector("#currentTemperature");
+  temperatureElement.innerHTML = Math.round(celsiusTemperature);
+}
+
+let celsiusTemperature = null;
+
 let form = document.querySelector("#search-form");
     form.addEventListener("submit", search);
+
+    let fahrenheitLink = document.querySelector("#fahrenheit-link");
+fahrenheitLink.addEventListener("click", displayFahrenheitTemperature);
+
+let celsiusLink = document.querySelector("#celsius-link");
+celsiusLink.addEventListener("click", displayCelsiusTemperature);
 
     let currentLocationButton = document.querySelector("#location");
 currentLocationButton.addEventListener("click", getCurrentLocation);

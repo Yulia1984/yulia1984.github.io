@@ -150,3 +150,9 @@ ul.weather-day {
 li#barcelona.col.city.cities {
   margin-left: 0;
 }
+
+.active {
+  color: rgb(33, 33, 33);
+  cursor: default;
+  text-decoration: none;
+}
